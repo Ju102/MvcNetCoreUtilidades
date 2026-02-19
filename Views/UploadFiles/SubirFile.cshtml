@@ -1,0 +1,20 @@
+﻿<div class="container text-center">
+    <div class="d-flex justify-content-center align-items-center w-100">
+        <form class="w-50 bg-primary-subtle px-3 py-3 rounded-3 border border-1 border-black" method="post" enctype="multipart/form-data">
+            <h2 class="text-center">Subida de Ficheros</h2>
+            <label>Seleccione un fichero:</label>
+            <input type="file" name="file" class="form-control w-50 mt-2 mx-auto" />
+            <button class="btn btn-success mt-2">Subir</button>
+        </form>
+    </div>
+    @if (ViewData["mensaje"] != null)
+    {
+        <div class="d-flex justify-content-center w-100 mt-3">
+            <div class="bg-success-subtle p-3 pb-1 w-50 rounded-3 text-center">
+                <p>@ViewData["mensaje"]</p>
+                <img class="img-fluid w-50 img-thumbnail mb-2" src='~/uploads/@ViewData["filename"]' />;
+            </div>
+        </div>
+
+    }
+</div>
