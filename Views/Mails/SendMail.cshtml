@@ -1,0 +1,22 @@
+﻿<div class="container">
+    @if (ViewData["mensaje"] != null)
+    {
+        <div class="bg-success-subtle rounded-3 border border-1 border-sucess">
+            <h4 class="text-success">@ViewData["mensaje"]</h4>
+        </div>
+    }
+
+    <h2>Enviar Mail NET Core</h2>
+    <form method="post">
+        <label>To: </label>
+        <input type="text" name="to" class="form-control" />
+
+        <label>Asunto:</label>
+        <input type="text" name="asunto" class="form-control" />
+
+        <label>Mensaje</label>
+        <textarea name="mensaje" class="form-control"></textarea>
+
+        <button class="btn btn-success">Enviar</button>
+    </form>
+</div>

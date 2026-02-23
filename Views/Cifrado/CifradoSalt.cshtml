@@ -1,0 +1,25 @@
+﻿<div class="container">
+    <h2>Cifrado con SALT</h2>
+    <form method="post">
+        <label>Contenido:</label>
+        <input type="text" name="contenido" class="form-control" />
+
+        <label>Resultado: </label>
+        <textarea rows="5" name="resultado" class="form-control">@ViewData["cifradoSalt"]</textarea>
+        @if (ViewData["salt"] != null)
+        {
+            <p><b>SALT:</b> @ViewData["salt"]</p>
+        }
+        <div class="container mt-4">
+            <button class="btn btn-success" name="accion" value="cifrar">Cifrar</button>
+            <button class="btn btn-primary" name="accion" value="comparar">Comparar</button>
+        </div>
+    </form>
+
+    @if (ViewData["mensaje"] != null)
+    {
+        <div class="container bg-secondary-subtle mt-3 py-2 rounded-2">
+            <h5 class="text-secondary">@ViewData["mensaje"]</h5>
+        </div>
+    }
+</div>
